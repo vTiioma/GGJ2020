@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class FloatTracker : ValueTracker<float>
 {
-    public void Update(float value)
+    public void UpdateValue(float value)
     {
         SetValue(GetValue() + value);
     }

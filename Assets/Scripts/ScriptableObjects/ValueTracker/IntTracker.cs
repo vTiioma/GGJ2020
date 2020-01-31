@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class IntTracker : ValueTracker<int>
 {
-    public void Update(int value)
+    public void UpdateValue(int value)
     {
         SetValue(GetValue() + value);
     }
