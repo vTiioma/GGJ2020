@@ -14,6 +14,13 @@ public class restartwhenfail : MonoBehaviour
     private freezeoncollide collide;
     [SerializeField]
     private Transform arrows;
+    [SerializeField]
+    private GameObject victoryscreen;
+    [SerializeField]
+    private GameObject seed;
+    [SerializeField]
+    private bool hasSeed = true;
+
 
     private void OnValidate()
     {
@@ -31,25 +38,10 @@ public class restartwhenfail : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, Vector2.right);
-            if (hit.Where(x => x.collider.isTrigger == false).ToArray().Length > 1)
+            LeanTween.moveX(gameObject, transform.position.x + 1, 0.25f).setOnComplete(() =>
             {
-                for (int i = 0; i < hit.Length; i++)
-                {
-                    if (hit[i].collider == collider || hit[i].collider.gameObject.tag == "Finish")
-                    {
-                        continue;
-                    }
-                    collide = hit[i].collider.gameObject.GetComponent<freezeoncollide>();
-                    hit[i].transform.Translate(Vector2.down * 2);
-                }
-            }
-            else
-            {
-                LeanTween.moveX(gameObject, transform.position.x + 1, 0.25f).setOnComplete(() =>
-                {
-                    arrows.position = transform.position + Vector3.up;
-                });
-            }
+                arrows.position = transform.position + Vector3.up;
+            });
         }
     }
 
@@ -58,7 +50,15 @@ public class restartwhenfail : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             Debug.Log("You won!");
+            Time.timeScale = 0;
+            victoryscreen.SetActive(true);
             return;
+        }
+        if (collision.gameObject.tag == "Respawn")
+        {
+            var item = collision.gameObject.GetComponent<freezeoncollide>();
+            item.growZone.SetActive(false);
+            item.child.SetActive(true);
         }
         body.velocity = Vector2.zero;
         transform.position = start.position;
