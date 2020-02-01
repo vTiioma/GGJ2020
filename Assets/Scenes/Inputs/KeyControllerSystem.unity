@@ -161,9 +161,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 426381961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d194ac39601b1ee4685b1e0f5f87c273, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a42eec459718c34d91dce024920ff81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identifier: left
+  onInput:
+    m_PersistentCalls:
+      m_Calls: []
   key: 276
   onKeyDown:
     m_PersistentCalls:
@@ -211,9 +215,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 540680813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d194ac39601b1ee4685b1e0f5f87c273, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a42eec459718c34d91dce024920ff81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identifier: up
+  onInput:
+    m_PersistentCalls:
+      m_Calls: []
   key: 273
   onKeyDown:
     m_PersistentCalls:
@@ -261,9 +269,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291663449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d194ac39601b1ee4685b1e0f5f87c273, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a42eec459718c34d91dce024920ff81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identifier: right
+  onInput:
+    m_PersistentCalls:
+      m_Calls: []
   key: 275
   onKeyDown:
     m_PersistentCalls:
@@ -281,7 +293,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1764415240}
   - component: {fileID: 1764415241}
-  - component: {fileID: 1764415242}
   m_Layer: 0
   m_Name: KeyController
   m_TagString: Untagged
@@ -324,22 +335,6 @@ MonoBehaviour:
   - {fileID: 1946860694}
   - {fileID: 426381963}
   - {fileID: 1291663451}
---- !u!114 &1764415242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764415239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0bb57b7818c6824896846e0cfa0243f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  components:
-  - {fileID: 1764415240}
-  - {fileID: 1764415241}
-  - {fileID: 1764415242}
 --- !u!1 &1946860692
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,9 +375,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1946860692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d194ac39601b1ee4685b1e0f5f87c273, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a42eec459718c34d91dce024920ff81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identifier: down
+  onInput:
+    m_PersistentCalls:
+      m_Calls: []
   key: 274
   onKeyDown:
     m_PersistentCalls:

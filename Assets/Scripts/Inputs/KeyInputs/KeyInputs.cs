@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class KeyInputs : MonoBehaviour
+public class KeyInputs : InputHandler
 {
     [SerializeField]
     private KeyCode key = KeyCode.A;
@@ -16,6 +16,7 @@ public class KeyInputs : MonoBehaviour
     private void OnKeyDown()
     {
         onKeyDown?.Invoke();
+        OnInput();
     }
 
     private void OnKeyUp()
