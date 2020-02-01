@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangableObject : MonoBehaviour
 {
+    public Vector3 directionOfPotentiallMovment = new Vector3(1, 1, 0);
     public enum PossibleMaterials
     {
        Wood,
@@ -11,7 +12,6 @@ public class ChangableObject : MonoBehaviour
        Glass,
        Pear
     };
-    public string objectName = "block"; 
     public PossibleMaterials dropDown = PossibleMaterials.Stone;
     public List<Component> components = new List<Component>();
     // Start is called before the first frame update

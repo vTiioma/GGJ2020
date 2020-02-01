@@ -7,7 +7,7 @@ public static class Scene
 {
     public static List<ChangableObject> changableObjects = new List<ChangableObject>();
     public static Transform staticScene;
-
+    public static List<Saveable> savedObjects = new List<Saveable>();
     public static void RemoveFrom(Component com, PossibleMaterials material)
     {
         CleanList();
@@ -32,7 +32,7 @@ public static class Scene
         }
     }
 
-    static void CleanList()
+    public static void CleanList()
     {
         for(int i=0; i < changableObjects.Count; i++)
         {
@@ -40,6 +40,14 @@ public static class Scene
             {
                 changableObjects.RemoveAt(i);
             }
+        }
+    }
+
+    public static void ResetScene()
+    {
+        foreach(var s in savedObjects)
+        {
+            s.GetOlder();
         }
     }
 }
