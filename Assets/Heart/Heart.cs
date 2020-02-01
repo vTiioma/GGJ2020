@@ -8,13 +8,16 @@ public class Heart : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        if (isOneIn)
+        if(other.tag == "Player")
         {
-            Victory();
-        }
-        else
-        {
-            isOneIn = true;
+            if (isOneIn)
+            {
+                Victory();
+            }
+            else
+            {
+                isOneIn = true;
+            }
         }
     }
     private void OnTriggerExit(Collider other)

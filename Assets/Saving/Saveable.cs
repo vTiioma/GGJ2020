@@ -14,6 +14,10 @@ public class Saveable : MonoBehaviour
     }
     public void GetOlder() {
         current++;
+        if (!this)
+        {
+            return;
+        }
         if(current >= lifespan && this.gameObject)
         {
             Destroy(this.gameObject);

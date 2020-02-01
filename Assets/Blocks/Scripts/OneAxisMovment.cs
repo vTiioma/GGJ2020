@@ -8,6 +8,7 @@ public class OneAxisMovment : MonoBehaviour
     public float distance = 10f;
     public float dragSpeed = 8f;
     public float maxMagnitude = 40f;
+    public Vector3 movmentDirection = Vector3.left;
     public Rigidbody rgb;
 
     private void Start()
@@ -20,6 +21,11 @@ public class OneAxisMovment : MonoBehaviour
         rgb.isKinematic = false;
         rgb.constraints = RigidbodyConstraints.FreezePositionZ |
                             RigidbodyConstraints.FreezeRotation;
+        ChangableObject co = this.gameObject.GetComponent<ChangableObject>();
+        if (co)
+        {
+            movmentDirection = co.directionOfPotentiallMovment;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -28,6 +34,8 @@ public class OneAxisMovment : MonoBehaviour
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, distance));
             Vector3 heading = mousePosition - transform.position;
+            float dotProduct = Vector3.Dot(heading, movmentDirection);
+            heading = heading.magnitude * dotProduct * movmentDirection;
             heading = Vector3.ClampMagnitude(heading * dragSpeed, maxMagnitude);
             rgb.velocity = heading;
         }

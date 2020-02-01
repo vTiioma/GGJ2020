@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangableObject : MonoBehaviour
 {
+    public Vector3 directionOfPotentiallMovment = new Vector3(1, 1, 0);
     public enum PossibleMaterials
     {
        Wood,
