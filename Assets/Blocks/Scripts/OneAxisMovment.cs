@@ -17,6 +17,7 @@ public class OneAxisMovment : MonoBehaviour
         //rgb.isKinematic = true;
         rgb.useGravity = false;
         rgb.velocity = Vector3.zero;
+        rgb.isKinematic = false;
         rgb.constraints = RigidbodyConstraints.FreezePositionZ |
                             RigidbodyConstraints.FreezeRotation;
     }
