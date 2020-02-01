@@ -6,6 +6,7 @@ using static ChangableObject;
 public static class Scene
 {
     public static List<ChangableObject> changableObjects = new List<ChangableObject>();
+    public static Transform staticScene;
 
     public static void RemoveFrom(Component com, PossibleMaterials material)
     {

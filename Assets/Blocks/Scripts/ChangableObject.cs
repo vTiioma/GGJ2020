@@ -42,7 +42,10 @@ public class ChangableObject : MonoBehaviour
 
     public void AddComponent(System.Type type)
     {
-        Component newComponent = this.gameObject.AddComponent(type);
-        components.Add(newComponent);
+        if (this.gameObject != null)
+        {
+            Component newComponent = this.gameObject.AddComponent(type);
+            components.Add(newComponent);
+        }
     }
 }
