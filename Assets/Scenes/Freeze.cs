@@ -12,7 +12,7 @@ public class Freeze : MonoBehaviour
     IEnumerator FreezeAGame()
     {
         Time.timeScale = 0.01f;
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.05f);
         Time.timeScale = 1f;
     }
 }

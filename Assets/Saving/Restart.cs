@@ -27,6 +27,6 @@ public class Restart : MonoBehaviour
         Destroy(temporaryScene);
         Scene.CleanList();
         Scene.ResetScene();
-        temporaryScene = Instantiate(scenePrefab);
+        temporaryScene = Instantiate(scenePrefab, this.transform);
     }
 }

@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 3712939581202623362}
   - component: {fileID: 5874443414272840524}
   - component: {fileID: -7979818643282686971}
-  - component: {fileID: 3510921202404796526}
+  - component: {fileID: 8314254796814546350}
+  - component: {fileID: 4157782006760740258}
   m_Layer: 8
   m_Name: Pear
   m_TagString: Player
@@ -144,8 +145,8 @@ MonoBehaviour:
   directionOfPotentiallMovment: {x: 1, y: 1, z: 0}
   dropDown: 3
   components: []
---- !u!64 &3510921202404796526
-MeshCollider:
+--- !u!135 &8314254796814546350
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -154,7 +155,20 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -482734666761881360, guid: 3bd6813ff5be2e84188cf735b39877d4, type: 3}
+  serializedVersion: 2
+  m_Radius: 2.8593237
+  m_Center: {x: -0.07282938, y: -1.5176322, z: 0}
+--- !u!136 &4157782006760740258
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7345147708153705408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.0192177
+  m_Height: 8.839321
+  m_Direction: 1
+  m_Center: {x: -0.028323103, y: 0.0427043, z: 0}
