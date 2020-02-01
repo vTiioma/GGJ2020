@@ -45,9 +45,11 @@ public static class Scene
 
     public static void ResetScene()
     {
-        foreach(var s in savedObjects)
+        changableObjects.Clear();
+        foreach (var s in savedObjects)
         {
             s.GetOlder();
+            changableObjects.Add(s.gameObject.GetComponent<ChangableObject>());
         }
     }
 }
