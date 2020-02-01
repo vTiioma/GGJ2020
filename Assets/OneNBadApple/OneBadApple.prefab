@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7903222832702629190}
   - component: {fileID: 1377944273}
   - component: {fileID: 1377944279}
+  - component: {fileID: -6681585269826324254}
   m_Layer: 0
   m_Name: OneBadApple
   m_TagString: Untagged
@@ -126,7 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ce29757c1cac24295b7e72f214dd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: block
   dropDown: 1
   components: []
   isDragged: 0
@@ -181,3 +181,16 @@ MonoBehaviour:
   dragSpeed: 2
   maxMagnitude: 10
   rgb: {fileID: 0}
+--- !u!114 &-6681585269826324254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991819888015481672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1273ed5a61f3e9e48bb0524bb3e7b5d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ruleChangers: []

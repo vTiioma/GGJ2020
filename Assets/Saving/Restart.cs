@@ -18,6 +18,8 @@ public class Restart : MonoBehaviour
     public void RestartLevel()
     {
         Destroy(temporaryScene);
+        Scene.CleanList();
+        Scene.ResetScene();
         temporaryScene = Instantiate(scenePrefab);
     }
 }
