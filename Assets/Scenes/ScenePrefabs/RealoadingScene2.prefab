@@ -200,7 +200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6449901778607642620}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94b4d588e32825443bcc37b3ffac9f29, type: 3}
   m_Name: 
@@ -493,11 +493,6 @@ PrefabInstance:
         type: 3}
       propertyPath: movmentDirection.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -790652751663510120, guid: 8a724e356e081cf4abd09226cd29bbb7,
-        type: 3}
-      propertyPath: movmentDirection.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -258579722529836285, guid: 8a724e356e081cf4abd09226cd29bbb7,
         type: 3}

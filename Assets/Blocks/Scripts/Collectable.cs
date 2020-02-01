@@ -6,6 +6,7 @@ public class Collectable : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
+        Points.IncreasePoints();
         Destroy(this.gameObject);
     }
 }

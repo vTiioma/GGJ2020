@@ -8,6 +8,13 @@ public class Restart : MonoBehaviour
 {
     [SerializeField]
     GameObject temporaryScene, scenePrefab;
+    [SerializeField]
+    IntTracker tracker;
+
+    public void Start()
+    {
+        Points.tracker = tracker;
+    }
     private void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.R))
