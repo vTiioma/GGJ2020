@@ -5,26 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class Heart : MonoBehaviour
 {
-    public bool isOneIn = false;
+    public int isOneIn = 0;
     public int levelIndex = 2;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            if (isOneIn)
+            if (isOneIn == 2)
             {
                 Victory();
             }
             else
             {
-                isOneIn = true;
+                isOneIn++;
             }
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        isOneIn = false;
+        isOneIn--;
     }
     void Victory()
     {
