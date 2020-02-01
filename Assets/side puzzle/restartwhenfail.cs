@@ -56,13 +56,21 @@ public class restartwhenfail : MonoBehaviour
         }
         if (collision.gameObject.tag == "Respawn")
         {
-            var item = collision.gameObject.GetComponent<freezeoncollide>();
-            item.growZone.SetActive(false);
-            item.child.SetActive(true);
+            if (hasSeed)
+            {
+                hasSeed = false;
+                seed.SetActive(false);
+                var item = collision.gameObject.GetComponentInParent<freezeoncollide>();
+                item.growZone.SetActive(false);
+                item.child.SetActive(true);
+            }
+            return;
         }
         body.velocity = Vector2.zero;
         transform.position = start.position;
         collide?.child.SetActive(true);
         arrows.position = transform.position + Vector3.up;
+        hasSeed = true;
+        seed.SetActive(true);
     }
 }
