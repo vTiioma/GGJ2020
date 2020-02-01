@@ -29,7 +29,7 @@ public class ObjectKeeper : MonoBehaviour {
             pos.x = Mathf.Clamp(pos.x, minX, maxX);
             pos.y = Mathf.Clamp(pos.y, minY, maxY);
             targetPosition = camera.ViewportToWorldPoint(pos);
-            ChangePosition();
+            ChangePosition(); 
     }
 
     public void ChangePosition()

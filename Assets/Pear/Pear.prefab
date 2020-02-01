@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4940484437544540902}
   - component: {fileID: 1325210132897230503}
   - component: {fileID: 9025357375534092498}
-  - component: {fileID: 4738703701003959329}
   - component: {fileID: 3712939581202623362}
   - component: {fileID: 5874443414272840524}
   - component: {fileID: -7979818643282686971}
+  - component: {fileID: 3510921202404796526}
   m_Layer: 0
   m_Name: Pear
   m_TagString: Untagged
@@ -31,14 +31,14 @@ RectTransform:
   m_GameObject: {fileID: 7345147708153705408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.0864258}
-  m_LocalScale: {x: 0.75114, y: 0.75114, z: 0.75114}
+  m_LocalScale: {x: 0.21682182, y: 0.21682182, z: 0.21682182}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.062, y: 0.054037627}
+  m_AnchoredPosition: {x: -2.101, y: 0.076856}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &1325210132897230503
@@ -48,7 +48,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7345147708153705408}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -482734666761881360, guid: 3bd6813ff5be2e84188cf735b39877d4, type: 3}
 --- !u!23 &9025357375534092498
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f42a2aaedbdb9d4ba7e75c3b1d739e1, type: 2}
+  - {fileID: 2100000, guid: 818f52cc20a1c73478c238848df2933f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,19 +87,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &4738703701003959329
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7345147708153705408}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3712939581202623362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +143,17 @@ MonoBehaviour:
   objectName: Pear
   dropDown: 3
   components: []
+--- !u!64 &3510921202404796526
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7345147708153705408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -482734666761881360, guid: 3bd6813ff5be2e84188cf735b39877d4, type: 3}

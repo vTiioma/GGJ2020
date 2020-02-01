@@ -9,7 +9,7 @@ public class RuleChanger : MonoBehaviour
     public Component com;
     public PossibleMaterials material = PossibleMaterials.Stone;
     // Start is called before the first frame update
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider col)
     {
         Debug.Log("Object has entered the trigger");
         if(isAdding)
