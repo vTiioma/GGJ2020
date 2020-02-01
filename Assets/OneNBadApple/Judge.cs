@@ -14,7 +14,7 @@ public class Judge : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Change Rules " + ChangeableObjects.changers.Count.ToString());
-        ChangeableObjects.ChangeFromTo(from, to);
+        //Debug.Log("Change Rules " + ChangeableObjects.changers.Count.ToString());
+        //ChangeableObjects.ChangeFromTo(from, to);
     }
 }

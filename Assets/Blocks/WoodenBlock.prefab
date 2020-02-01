@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4863957758871294178}
   - component: {fileID: 3911259071379943090}
   - component: {fileID: -258579722529836285}
+  - component: {fileID: -790652751663510120}
   m_Layer: 0
   m_Name: WoodenBlock
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0b79a0efd586b7e469892d30ea1a1fe2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,4 +124,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: Wood
-  components: []
+  components:
+  - {fileID: 0}
+--- !u!114 &-790652751663510120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4863957758871294176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1503d72fe885348bd9edd21eb69ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDragged: 0
+  distance: 5
+  dragSpeed: 2
+  maxMagnitude: 10
+  rgb: {fileID: 0}

@@ -8,6 +8,7 @@ public static class Scene
 
     public static void RemoveFrom(Component com, string name)
     {
+        CleanList();
         foreach(var c in changableObjects)
         {
             if(c.objectName == name)
@@ -19,11 +20,23 @@ public static class Scene
 
     public static void AddTo(Component com, string name)
     {
+        CleanList();
         foreach (var c in changableObjects)
         {
             if (c.objectName == name)
             {
                 c.AddComponent(com.GetType());
+            }
+        }
+    }
+
+    static void CleanList()
+    {
+        for(int i=0; i < changableObjects.Count; i++)
+        {
+            if (!changableObjects[i])
+            {
+                changableObjects.RemoveAt(i);
             }
         }
     }

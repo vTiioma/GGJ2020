@@ -22,9 +22,13 @@ public class ChangableObject : MonoBehaviour
                 componentsToRemove.Add(c);
             }
         }
-        foreach(var c in componentsToRemove)
+
+        while(componentsToRemove.Count > 0)
         {
+            var c = componentsToRemove[0];
+            componentsToRemove.Remove(c);
             components.Remove(c);
+            Destroy(c);
         }
     }
 
