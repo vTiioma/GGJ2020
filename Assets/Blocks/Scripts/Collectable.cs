@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    public void Start()
+    {
+        
+    }
     private void OnTriggerEnter(Collider other)
     {
         Points.IncreasePoints();
