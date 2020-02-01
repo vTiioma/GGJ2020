@@ -6,7 +6,9 @@ using System.Collections;
 
 public class Restart : MonoBehaviour
 {
-    private void Update()
+    [SerializeField]
+    GameObject temporaryScene, scenePrefab;
+    private void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -15,6 +17,7 @@ public class Restart : MonoBehaviour
     }
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Destroy(temporaryScene);
+        temporaryScene = Instantiate(scenePrefab);
     }
 }
