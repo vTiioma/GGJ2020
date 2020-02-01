@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 4984698426801594904}
   - component: {fileID: 2898850410079296643}
   - component: {fileID: 7903222832702629190}
+  - component: {fileID: 1377944273}
+  - component: {fileID: 1377944279}
   m_Layer: 0
   m_Name: OneBadApple
   m_TagString: Untagged
@@ -31,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 991819888015481672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.71, y: -1.7, z: 0}
-  m_LocalScale: {x: 1, y: 0.386, z: 1}
+  m_LocalScale: {x: 0.50107, y: 0.19341303, z: 0.50107}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a75e31acb2efe814b81c1f96d881778b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: block
+  dropDown: 1
   components: []
   isDragged: 0
   distance: 5
@@ -143,6 +146,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc38f967503a91744b9986dd5a662c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAdding: 0
+  com: {fileID: 1377944279}
+  material: 0
+--- !u!114 &1377944273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991819888015481672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc38f967503a91744b9986dd5a662c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   isAdding: 1
-  com: {fileID: 0}
-  material: 
+  com: {fileID: 1377944279}
+  material: 3
+--- !u!114 &1377944279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991819888015481672}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1503d72fe885348bd9edd21eb69ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDragged: 0
+  distance: 5
+  dragSpeed: 2
+  maxMagnitude: 10
+  rgb: {fileID: 0}

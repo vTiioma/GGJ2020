@@ -154,5 +154,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: Pear
-  components:
-  - {fileID: 0}
+  dropDown: 3
+  components: []

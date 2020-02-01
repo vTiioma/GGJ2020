@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static ChangableObject;
 
 public class RuleChanger : MonoBehaviour
 {
     public bool isAdding = true;
     public Component com;
-    public string material;
+    public PossibleMaterials material = PossibleMaterials.Stone;
     // Start is called before the first frame update
     private void OnTriggerEnter()
     {

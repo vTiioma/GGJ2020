@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class ChangableObject : MonoBehaviour
 {
-    public string objectName = "block";
+    public enum PossibleMaterials
+    {
+       Wood,
+       Stone,
+       Glass,
+       Pear
+    };
+    public string objectName = "block"; 
+    public PossibleMaterials dropDown = PossibleMaterials.Stone;
     public List<Component> components = new List<Component>();
     // Start is called before the first frame update
     void Awake()
