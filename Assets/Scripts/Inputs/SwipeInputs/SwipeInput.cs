@@ -3,27 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class SwipeInput : MonoBehaviour
+public abstract class SwipeInput : InputHandler
 {
-    [SerializeField]
-    private string identifier = string.Empty;
     [SerializeField]
     private float swipeThreshold = 1;
     protected Vector2 downPosition { get; private set; }
-    [Space]
-    [Space]
-    [Space]
-    public UnityEvent onInput = new UnityEvent();
 
-    public string GetIdentifier()
-    {
-        return identifier;
-    }
-
-    public void OnInput()
-    {
-        onInput?.Invoke();
-    }
 
     public void SetSwipeThreshold(float value)
     {
