@@ -14,7 +14,12 @@ public class BehaviourChanger : MonoBehaviour
     public void ChangeComponent(System.Type newComponent)
     {
         Destroy(component);
-        this.gameObject.AddComponent(newComponent);
-        component = this.gameObject.GetComponent(newComponent);
+        
+        if (this)
+        {
+            this.gameObject.AddComponent(newComponent);
+            Destroy(this);
+        }
+
     }
 }

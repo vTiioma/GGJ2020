@@ -156,5 +156,5 @@ MonoBehaviour:
   isDragged: 0
   distance: 10
   dragSpeed: 11.87
-  maxMagnitude: 30.9
+  maxMagnitude: 10
   rgb: {fileID: 0}

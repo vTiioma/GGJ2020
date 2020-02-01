@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof (Rigidbody))]
-public class DragAndDrop : MonoBehaviour
-{
+public class DragAndDrop : ChangableObject { 
     public bool isDragged = false;
     public float distance = 5f;
     public float dragSpeed = 2f;
@@ -14,6 +13,8 @@ public class DragAndDrop : MonoBehaviour
     private void Start()
     {
         rgb = this.gameObject.GetComponent<Rigidbody>();
+        rgb.isKinematic = false;
+        rgb.constraints = RigidbodyConstraints.None;
     }
     // Update is called once per frame
     void Update()
