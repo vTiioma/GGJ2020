@@ -48,6 +48,7 @@ public class OneAxisMovment : MonoBehaviour
     public void OnMouseDown()
     {
         isDragged = true;
+        Scene.sound.Movment();
     }
 
     public void OnMouseUp()
