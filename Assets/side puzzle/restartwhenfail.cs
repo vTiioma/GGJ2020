@@ -97,8 +97,8 @@ public class restartwhenfail : MonoBehaviour
                 hasSeed = false;
                 seed.SetActive(false);
                 var item = collision.gameObject.GetComponentInParent<freezeoncollide>();
-                item.growZone.SetActive(false);
-                item.child.SetActive(true);
+                item.growZone?.SetActive(false);
+                item.child?.SetActive(true);
                 audio.PlayOneShot(grow);
             }
             return;
