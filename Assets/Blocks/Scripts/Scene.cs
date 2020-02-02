@@ -7,6 +7,7 @@ public static class Scene
 {
     public static List<ChangableObject> changableObjects = new List<ChangableObject>();
     public static Transform staticScene;
+    public static SoundPlayer sound;
     public static List<Saveable> savedObjects = new List<Saveable>();
     public static void RemoveFrom(Component com, PossibleMaterials material)
     {
@@ -49,7 +50,10 @@ public static class Scene
         foreach (var s in savedObjects)
         {
             s.GetOlder();
-            changableObjects.Add(s.gameObject.GetComponent<ChangableObject>());
+            if (s)
+            {
+                changableObjects.Add(s.gameObject.GetComponent<ChangableObject>());
+            }    
         }
     }
 }

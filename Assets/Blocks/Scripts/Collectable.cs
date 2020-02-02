@@ -6,11 +6,17 @@ public class Collectable : MonoBehaviour
 {
     public void Start()
     {
-        
+        this.gameObject.GetComponent<Collider>().isTrigger = true;
     }
     private void OnTriggerEnter(Collider other)
     {
-        Points.IncreasePoints();
-        Destroy(this.gameObject);
+        Debug.Log("Stay");
+        if (other.gameObject.tag == "Player")
+        {
+            Scene.sound.Point();
+            Points.IncreasePoints();
+            Destroy(this.gameObject);
+        }
     }
+
 }
