@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: bba3cf00af7fbe749bb183f00aef289d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Apple Tree
+  fontNames:
+  - Apple Tree
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8ac4fc9d89acaa44fbf4847817451129, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
