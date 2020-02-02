@@ -11,7 +11,7 @@ public static class LevelLoader
     {
         Debug.Log($"Unload {buildIndex}" );
         SceneManager.UnloadSceneAsync(buildIndex);
-        if(buildIndex == 3)
+        if(buildIndex >= 3)
         {
             SceneManager.LoadSceneAsync("demo");
             return;
