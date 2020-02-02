@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4984698426801594904}
   - component: {fileID: 2898850410079296643}
   - component: {fileID: 7903222832702629190}
-  - component: {fileID: 1377944273}
   - component: {fileID: 1377944279}
   - component: {fileID: -6681585269826324254}
   - component: {fileID: 882929731}
@@ -35,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 991819888015481672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.71, y: -1.8594, z: 0}
-  m_LocalScale: {x: 0.088445626, y: 0.08859284, z: 0.084291734}
+  m_LocalScale: {x: 0.11911548, y: 0.119313754, z: 0.113521166}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,10 +96,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 3.3922744
-  m_Height: 6.773275
+  m_Radius: 3.0610433
+  m_Height: 6.111913
   m_Direction: 1
-  m_Center: {x: -1.9847195, y: -1.8133602, z: 0.1720537}
+  m_Center: {x: 0.002663207, y: -1.3167887, z: 0.1720538}
 --- !u!54 &4984698426801594904
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -113,7 +112,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -152,21 +151,6 @@ MonoBehaviour:
   isAdding: 0
   com: {fileID: 1377944279}
   material: 0
---- !u!114 &1377944273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991819888015481672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc38f967503a91744b9986dd5a662c0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAdding: 1
-  com: {fileID: 882929731}
-  material: 0
 --- !u!114 &1377944279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ruleChangers:
-  - {fileID: 1377944273}
+  - {fileID: 7903222832702629190}
   color: {r: 0.11495497, g: 0.5754717, b: 0.10586509, a: 0}
 --- !u!114 &882929731
 MonoBehaviour:

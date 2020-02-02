@@ -6,6 +6,7 @@ public class ClickDestruction : MonoBehaviour
 {
     private void OnMouseDown()
     {
+        Scene.sound.Destruction();
         Destroy(this.gameObject);
     }
 }
