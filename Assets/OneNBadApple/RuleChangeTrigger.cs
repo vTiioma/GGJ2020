@@ -17,5 +17,6 @@ public class RuleChangeTrigger : MonoBehaviour
         material = new Material(material);
         material.SetColor("_Color", color);
         this.gameObject.GetComponent<MeshRenderer>().material = material;
+        Scene.sound.RuleChange();
     }
 }
