@@ -18,11 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/levelThree.unity
     guid: f08b12a9503dfdc48b8e2fbe544edd51
   - enabled: 1
-    path: Assets/side puzzle/demo.unity
-    guid: e30e744c5f8d9574a8f8c50af1eb0c79
-  - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: 02edea967a0f48c4e8650d7efa844735
+  - enabled: 1
+    path: Assets/side puzzle/demo.unity
+    guid: e30e744c5f8d9574a8f8c50af1eb0c79
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
