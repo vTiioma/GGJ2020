@@ -58,10 +58,10 @@ public class Heart : MonoBehaviour
 
     IEnumerator LoadNextLevel()
     {
-        Time.timeScale = 0.1f;
-        yield return new WaitForSeconds(0.1f);
+        Time.timeScale = 0.3f;
+        yield return new WaitForSeconds(0.25f);
         Time.timeScale = 1;
         LevelLoader.LoadNextLevel();
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }

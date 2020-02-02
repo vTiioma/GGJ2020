@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TrueHeart
-  m_Shader: {fileID: 4800000, guid: 4a845390d56cf9b40a915bf4fcf7a83f, type: 3}
+  m_Shader: {fileID: 4800000, guid: 08f8aa368d24c4349b1a7269ca010cce, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -27,6 +27,7 @@ Material:
         m_Texture: {fileID: 2800000, guid: b4f2a9c79c8fab74fade53148f6e5bf0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _Brightness: 0
     m_Colors:
     - _Color: {r: 0.23584908, g: 0.20714079, b: 0.2058117, a: 1}
