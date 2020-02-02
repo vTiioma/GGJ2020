@@ -19,6 +19,8 @@ public class restartwhenfail : MonoBehaviour
     [SerializeField]
     private GameObject seed;
     [SerializeField]
+    private GameObject pointer;
+    [SerializeField]
     private bool hasSeed = true;
     [SerializeField]
     private AudioSource audio;
@@ -68,7 +70,7 @@ public class restartwhenfail : MonoBehaviour
                 TryMoveRight();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.anyKeyDown && !Input.GetMouseButtonDown(0))
         {
             TryMoveRight();
         }
@@ -155,5 +157,9 @@ public class restartwhenfail : MonoBehaviour
         PlayWalkParticles();
         audio.PlayOneShot(walking[Random.Range(0, 3)]);
         LeanTween.moveX(gameObject, transform.position.x + 1, 0.25f).setOnComplete(ResetArrowPosition);
+        if (pointer.activeSelf == true)
+        {
+            pointer.SetActive(false);
+        }
     }
 }
