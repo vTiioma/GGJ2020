@@ -1,10 +1,11 @@
-﻿Shader "Custom/SimpleLambert"
+﻿Shader "Custom/ToonEmissibe"
 {
     Properties
     {
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_RampTex("Ramp", 2D) = "white" {}
 		_Color("Main Color", Color) = (1,1,1,1)
+		_Brightness("Brightness", Float) = 0
     }
     SubShader
     {
@@ -20,6 +21,7 @@
 
         sampler2D _MainTex;
 		sampler2D _RampTex;
+		float _Brightness;
 		fixed4 _Color;
 
         struct Input
@@ -40,6 +42,7 @@
             // Albedo comes from a texture tinted by color
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
             o.Albedo = c.rgb * _Color;
+			o.Emission = _Color * _Brightness;
             // Metallic and smoothness come from slider variables
             o.Alpha = c.a;
         }

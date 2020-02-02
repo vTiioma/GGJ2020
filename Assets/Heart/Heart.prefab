@@ -109,6 +109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOneIn: 0
   levelIndex: 2
+  good: {r: 0.8207547, g: 0.081301175, b: 0.081301175, a: 0}
+  bad: {r: 0.3773585, g: 0.33997864, b: 0.33997864, a: 0}
+  renderer: {fileID: 8660072967542158292}
 --- !u!1 &6594920033581777025
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +171,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 333d6a53d82e3324cb793567f3e4c0b8, type: 2}
+  - {fileID: 2100000, guid: 16d6f43ec17a4f94792f3307790eb0b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
