@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundPlayer : MonoBehaviour
 {
-    public AudioClip victory, point, destruction, movment;
+    public AudioClip victory, point, destruction, movment, rules;
     public AudioSource source;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,10 @@ public class SoundPlayer : MonoBehaviour
     public void Movment()
     {
         source.PlayOneShot(movment);
+    }
+    public void RuleChange()
+    {
+        source.PlayOneShot(rules);
     }
 
 }
