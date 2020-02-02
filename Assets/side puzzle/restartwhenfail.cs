@@ -20,6 +20,14 @@ public class restartwhenfail : MonoBehaviour
     private GameObject seed;
     [SerializeField]
     private bool hasSeed = true;
+    [SerializeField]
+    private AudioSource audio;
+    [SerializeField]
+    private AudioClip[] walking;
+    [SerializeField]
+    private AudioClip restart;
+    [SerializeField]
+    private AudioClip win;
 
 
     private void OnValidate()
@@ -37,7 +45,7 @@ public class restartwhenfail : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, Vector2.right);
+            audio.PlayOneShot(walking[Random.Range(0, 3)]);
             LeanTween.moveX(gameObject, transform.position.x + 1, 0.25f).setOnComplete(() =>
             {
                 arrows.position = transform.position + Vector3.up;
@@ -52,6 +60,7 @@ public class restartwhenfail : MonoBehaviour
             Debug.Log("You won!");
             Time.timeScale = 0;
             victoryscreen.SetActive(true);
+            audio.PlayOneShot(win);
             return;
         }
         if (collision.gameObject.tag == "Respawn")
@@ -72,5 +81,6 @@ public class restartwhenfail : MonoBehaviour
         arrows.position = transform.position + Vector3.up;
         hasSeed = true;
         seed.SetActive(true);
+        audio.PlayOneShot(restart);
     }
 }
