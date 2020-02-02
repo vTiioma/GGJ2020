@@ -27,11 +27,13 @@ public class restartwhenfail : MonoBehaviour
     [SerializeField]
     private AudioClip restart;
     [SerializeField]
+    private AudioClip grow;
+    [SerializeField]
     private AudioClip win;
     [SerializeField]
-    private ParticleSystem walkParticles;
+    private ParticleSystem[] walkParticles;
     [SerializeField]
-    private ParticleSystem dealthParticles;
+    private ParticleSystem[] dealthParticles;
     [SerializeField]
     private float dragThreshold = 30;
     private bool canMove = true;
@@ -97,14 +99,31 @@ public class restartwhenfail : MonoBehaviour
                 var item = collision.gameObject.GetComponentInParent<freezeoncollide>();
                 item.growZone.SetActive(false);
                 item.child.SetActive(true);
+                audio.PlayOneShot(grow);
             }
             return;
         }
-        dealthParticles.transform.position = transform.position;
-        dealthParticles.Play();
+        PlayDeathParticles();
         collide?.child.SetActive(true);
         audio.PlayOneShot(restart);
         LeanTween.value(0, 1, 0.5f).setOnComplete(ResetPlayer);
+    }
+
+    private void PlayWalkParticles()
+    {
+        for (int i = 0; i < walkParticles.Length; i++)
+        {
+            walkParticles[i].Play();
+        }
+    }
+
+    private void PlayDeathParticles()
+    {
+        for (int i = 0; i < dealthParticles.Length; i++)
+        {
+            dealthParticles[i].transform.position = transform.position;
+            dealthParticles[i].Play();
+        }
     }
 
     private void ResetPlayer()
@@ -129,7 +148,7 @@ public class restartwhenfail : MonoBehaviour
             return;
         }
         canMove = false;
-        walkParticles.Play();
+        PlayWalkParticles();
         audio.PlayOneShot(walking[Random.Range(0, 3)]);
         LeanTween.moveX(gameObject, transform.position.x + 1, 0.25f).setOnComplete(ResetArrowPosition);
     }
