@@ -36,6 +36,8 @@ public class restartwhenfail : MonoBehaviour
     private ParticleSystem[] dealthParticles;
     [SerializeField]
     private float dragThreshold = 30;
+    [SerializeField]
+    private crossfademusic music;
     private bool canMove = true;
 
     private Vector2 downPosition = Vector2.zero;
@@ -77,6 +79,7 @@ public class restartwhenfail : MonoBehaviour
         if (canMove == false)
         {
             canMove = true;
+            ResetArrowPosition();
         }
     }
 
@@ -88,6 +91,7 @@ public class restartwhenfail : MonoBehaviour
             Time.timeScale = 0;
             victoryscreen.SetActive(true);
             audio.PlayOneShot(win);
+            music.Crossfade();
             return;
         }
         if (collision.gameObject.tag == "Respawn")
@@ -137,7 +141,7 @@ public class restartwhenfail : MonoBehaviour
 
     private void ResetArrowPosition()
     {
-        arrows.position = transform.position + Vector3.up;
+        arrows.position = transform.position;
     }
 
     private void TryMoveRight()
