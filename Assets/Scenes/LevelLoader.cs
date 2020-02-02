@@ -11,12 +11,17 @@ public static class LevelLoader
     {
         Debug.Log($"Unload {buildIndex}" );
         SceneManager.UnloadSceneAsync(buildIndex);
+        if(buildIndex == 3)
+        {
+            SceneManager.LoadSceneAsync("demo");
+            return;
+        }
         buildIndex++;
         SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Additive);
     }
 
     public static void LoadFirstLevel()
     {
-        SceneManager.LoadSceneAsync("levelOne", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("MainScene");
     }
 }
