@@ -9,6 +9,6 @@ public class UILoader : MonoBehaviour
     void Start()
     {
         SceneManager.LoadScene("UI", LoadSceneMode.Additive);
-        SceneManager.LoadScene(1, LoadSceneMode.Additive);
+       SceneManager.LoadScene("levelOne", LoadSceneMode.Additive);
     }
 }

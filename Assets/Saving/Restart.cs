@@ -14,6 +14,7 @@ public class Restart : MonoBehaviour
     public void Start()
     {
         Points.tracker = tracker;
+        Scene.reset = this;
     }
     private void LateUpdate()
     {

@@ -8,6 +8,7 @@ public static class Scene
     public static List<ChangableObject> changableObjects = new List<ChangableObject>();
     public static Transform staticScene;
     public static SoundPlayer sound;
+    public static Restart reset;
     public static List<Saveable> savedObjects = new List<Saveable>();
     public static void RemoveFrom(Component com, PossibleMaterials material)
     {

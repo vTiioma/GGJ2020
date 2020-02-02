@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirstLevelLoader : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class FirstLevelLoader : MonoBehaviour
     {
         if (Input.anyKey || Input.GetMouseButton(0))
         {
-            LevelLoader.LoadNextLevel();
+            LevelLoader.LoadFirstLevel();
+            Destroy(this);
         }
     }
 }
