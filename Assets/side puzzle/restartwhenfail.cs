@@ -31,6 +31,8 @@ public class restartwhenfail : MonoBehaviour
     [SerializeField]
     private ParticleSystem walkParticles;
     [SerializeField]
+    private ParticleSystem dealthParticles;
+    [SerializeField]
     private float dragThreshold = 30;
     private bool canMove = true;
 
@@ -98,13 +100,20 @@ public class restartwhenfail : MonoBehaviour
             }
             return;
         }
+        dealthParticles.transform.position = transform.position;
+        dealthParticles.Play();
+        collide?.child.SetActive(true);
+        audio.PlayOneShot(restart);
+        LeanTween.value(0, 1, 0.5f).setOnComplete(ResetPlayer);
+    }
+
+    private void ResetPlayer()
+    {
         body.velocity = Vector2.zero;
         transform.position = start.position;
-        collide?.child.SetActive(true);
         arrows.position = transform.position + Vector3.up;
         hasSeed = true;
         seed.SetActive(true);
-        audio.PlayOneShot(restart);
     }
 
     private void ResetArrowPosition()
