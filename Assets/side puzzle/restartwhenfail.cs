@@ -28,7 +28,13 @@ public class restartwhenfail : MonoBehaviour
     private AudioClip restart;
     [SerializeField]
     private AudioClip win;
+    [SerializeField]
+    private ParticleSystem walkParticles;
+    [SerializeField]
+    private float dragThreshold = 30;
+    private bool canMove = true;
 
+    private Vector2 downPosition = Vector2.zero;
 
     private void OnValidate()
     {
@@ -43,13 +49,30 @@ public class restartwhenfail : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            downPosition = Input.mousePosition;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            float delta = Input.mousePosition.x - downPosition.x;
+            if (delta > 0 && delta >= dragThreshold)
+            {
+                TryMoveRight();
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            audio.PlayOneShot(walking[Random.Range(0, 3)]);
-            LeanTween.moveX(gameObject, transform.position.x + 1, 0.25f).setOnComplete(() =>
-            {
-                arrows.position = transform.position + Vector3.up;
-            });
+            TryMoveRight();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (canMove == false)
+        {
+            canMove = true;
         }
     }
 
@@ -82,5 +105,23 @@ public class restartwhenfail : MonoBehaviour
         hasSeed = true;
         seed.SetActive(true);
         audio.PlayOneShot(restart);
+    }
+
+    private void ResetArrowPosition()
+    {
+        arrows.position = transform.position + Vector3.up;
+    }
+
+    private void TryMoveRight()
+    {
+        if (canMove == false)
+        {
+            Debug.Log("can't move yet");
+            return;
+        }
+        canMove = false;
+        walkParticles.Play();
+        audio.PlayOneShot(walking[Random.Range(0, 3)]);
+        LeanTween.moveX(gameObject, transform.position.x + 1, 0.25f).setOnComplete(ResetArrowPosition);
     }
 }
