@@ -9,8 +9,6 @@ public class restartwhenfail : MonoBehaviour
     [SerializeField]
     private Rigidbody2D body;
     [SerializeField]
-    private new Collider2D collider;
-    [SerializeField]
     private freezeoncollide collide;
     [SerializeField]
     private Transform arrows;
@@ -18,6 +16,8 @@ public class restartwhenfail : MonoBehaviour
     private GameObject victoryscreen;
     [SerializeField]
     private GameObject seed;
+    [SerializeField]
+    private GameObject pointer;
     [SerializeField]
     private bool hasSeed = true;
     [SerializeField]
@@ -45,7 +45,6 @@ public class restartwhenfail : MonoBehaviour
     private void OnValidate()
     {
         body = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
     }
 
     private void Start()
@@ -68,7 +67,7 @@ public class restartwhenfail : MonoBehaviour
                 TryMoveRight();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.anyKeyDown && !Input.GetMouseButtonDown(0))
         {
             TryMoveRight();
         }
@@ -155,5 +154,9 @@ public class restartwhenfail : MonoBehaviour
         PlayWalkParticles();
         audio.PlayOneShot(walking[Random.Range(0, 3)]);
         LeanTween.moveX(gameObject, transform.position.x + 1, 0.25f).setOnComplete(ResetArrowPosition);
+        if (pointer.activeSelf == true)
+        {
+            pointer.SetActive(false);
+        }
     }
 }
