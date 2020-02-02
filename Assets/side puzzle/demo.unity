@@ -5756,7 +5756,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 698e2b7214cc58c43909fda3206479a8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ccd62520627e6d947abb46c2b1f414a8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -8169,7 +8169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 927529685}
   body: {fileID: 1463889932}
-  collider: {fileID: 1463889933}
   collide: {fileID: 0}
   arrows: {fileID: 329909069}
   victoryscreen: {fileID: 1173943246}
@@ -8182,7 +8181,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a0b8007ad6378e449b0d9a43b600021d, type: 3}
   - {fileID: 8300000, guid: d626d65e48e863a4e9aa20b4c8b2f456, type: 3}
   restart: {fileID: 8300000, guid: 592a9fdbe7dec6c43acde9f79a9be9ba, type: 3}
-  grow: {fileID: 8300000, guid: d44770685312eee4d9fcc74c516c0eb8, type: 3}
+  grow: {fileID: 8300000, guid: b3f53c5efdca1524fa79c94ebda5649d, type: 3}
   win: {fileID: 8300000, guid: df17130af4c578e488da2a892ed14f22, type: 3}
   walkParticles:
   - {fileID: 388113838}

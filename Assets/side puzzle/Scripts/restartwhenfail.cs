@@ -9,8 +9,6 @@ public class restartwhenfail : MonoBehaviour
     [SerializeField]
     private Rigidbody2D body;
     [SerializeField]
-    private new Collider2D collider;
-    [SerializeField]
     private freezeoncollide collide;
     [SerializeField]
     private Transform arrows;
@@ -47,7 +45,6 @@ public class restartwhenfail : MonoBehaviour
     private void OnValidate()
     {
         body = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
     }
 
     private void Start()
