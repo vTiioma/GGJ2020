@@ -8,6 +8,12 @@ public class Collectable : MonoBehaviour
     public void Start()
     {
         colliders = this.gameObject.GetComponents<BoxCollider>();
+        Rigidbody rgb = this.gameObject.GetComponent<Rigidbody>();
+
+        if (rgb)
+        {
+            rgb.constraints = RigidbodyConstraints.FreezeAll;
+        }
         Debug.Log("colliders" + colliders.Length);
     }
 
