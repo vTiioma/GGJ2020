@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    Collider[] colliders;
     public void Start()
     {
-        this.gameObject.GetComponent<Collider>().isTrigger = true;
+        colliders = this.gameObject.GetComponents<BoxCollider>();
+        Debug.Log("colliders" + colliders.Length);
     }
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
+        //this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
         Debug.Log("Stay");
-        if (other.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             Scene.sound.Point();
             Points.IncreasePoints();
             Destroy(this.gameObject);
         }
     }
+
 
 }
